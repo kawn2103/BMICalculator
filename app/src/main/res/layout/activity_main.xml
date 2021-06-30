@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide_line_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guide_line_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guide_line_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <TextView
+        android:id="@+id/height_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="신장 : "
+        android:autoSizeTextType="uniform"
+        app:layout_constraintTop_toTopOf="@id/horizontal_guide_line_1"
+        app:layout_constraintStart_toStartOf="@id/vertical_guide_line_1"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <EditText
+        android:id="@+id/height_et"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="신장을 입력해주세요."
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="@id/horizontal_guide_line_1"
+        app:layout_constraintBottom_toBottomOf="@id/height_tv"
+        app:layout_constraintStart_toEndOf="@id/height_tv"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guide_line_2"/>
+
+    <TextView
+        android:id="@+id/weight_tv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center|start"
+        android:text="체중 : "
+        android:autoSizeTextType="uniform"
+        app:layout_constraintTop_toBottomOf="@id/height_tv"
+        app:layout_constraintStart_toStartOf="@id/vertical_guide_line_1"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <EditText
+        android:id="@+id/weight_et"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="체중을 입력해주세요."
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/height_tv"
+        app:layout_constraintBottom_toBottomOf="@id/weight_tv"
+        app:layout_constraintStart_toEndOf="@id/weight_tv"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guide_line_2"/>
+
+    <Button
+        android:id="@+id/result_bt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="확인하기"
+        android:autoSizeTextType="uniform"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/weight_tv"
+        app:layout_constraintStart_toStartOf="@id/vertical_guide_line_1"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guide_line_2"
+        app:layout_constraintHeight_percent="0.08"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
